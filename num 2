@@ -1,0 +1,20 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    long long k2, k3, k5, k6;
+
+    cout << "Enter numbers for k2, k3, k5, k6: ";
+    cin >> k2 >> k3 >> k5 >> k6;
+
+    long long num256 = min(k2, min(k5, k6));
+    k2 -= num256;
+    long long num32 = min(k2, k3);
+
+    long long total = num256 * 256 + num32 * 32;
+
+    cout << "Maximum sum is: " << total << endl;
+
+    return 0;
+}
